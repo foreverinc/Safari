@@ -9,607 +9,395 @@
 
         <!-- Favicon -->
         <link href="img/logo.jpg" rel="icon" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- Font Awesome -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/473bffc45b.js" crossorigin="anonymous"></script>
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-        <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/style.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/style.css" />
     </head>
-
     <body>
-        <!-- Topbar Start -->
-        <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+        <!--navbar start -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark pt-1 p-md-3">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                        <div class="d-inline-flex align-items-center">
-                            <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
-                            <p class="text-body px-3">|</p>
-                            <p><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 text-center text-lg-right">
-                        <div class="d-inline-flex align-items-center">
-                            <a class="text-primary px-3" href="">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="text-primary px-3" href="">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="text-primary px-3" href="">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a class="text-primary px-3" href="">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="text-primary pl-3" href="">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Topbar End -->
-
-        <!-- Navbar Start -->
-        <div class="container-fluid position-relative nav-bar p-0">
-            <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-                <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-                    <a href="" class="navbar-brand">
-                        
-                        <h1 class="m-0 text-primary"><img src="img/logo.jpg" class="logo" alt=""><span class="text-dark">BARA</span>BARA</h1>
-                    </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                        <div class="navbar-nav ml-auto py-0">
-                            <a href="" class="nav-item nav-link active">Home</a>
-                            <a href="" class="nav-item nav-link">About</a>
-                            <a href="" class="nav-item nav-link">Services</a>
-                            <a href="" class="nav-item nav-link">Tour Packages</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu border-0 rounded-0 m-0">
-                                    <a href="" class="dropdown-item">Blog Grid</a>
-                                    <a href="" class="dropdown-item">Blog Detail</a>
-                                    <a href="" class="dropdown-item">Destination</a>
-                                    <a href="" class="dropdown-item">Travel Guides</a>
-                                    <a href="" class="dropdown-item">Testimonial</a>
-                                </div>
-                            </div>
-                            <a href="" class="nav-item nav-link">Contact</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <!-- Navbar End -->
-
-        <!-- Carousel Start -->
-        <div class="container-fluid">
-            <div id="header-carousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="w-100" src="img/carousel-1.jpg" alt="Image" />
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 900px;">
-                                <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
-                                <h1 class="display-3 text-white mb-md-4">Let's Discover The World Together</h1>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="w-100" src="img/carousel-2.jpg" alt="Image" />
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 900px;">
-                                <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
-                                <h1 class="display-3 text-white mb-md-4">Discover Amazing Places With Us</h1>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
-                    <div class="btn btn-dark" style="width: 45px; height: 45px;">
-                        <span class="carousel-control-prev-icon mb-n2"></span>
-                    </div>
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.jpg" class="logo" alt="" />
+                    <img src="img/bara.png" class="logos" alt="" />
                 </a>
-                <a class="carousel-control-next" href="#header-carousel" data-slide="next">
-                    <div class="btn btn-dark" style="width: 45px; height: 45px;">
-                        <span class="carousel-control-next-icon mb-n2"></span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- Carousel End -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- Booking Start -->
-        <div class="container-fluid booking">
-            <div class="container mb-5 ">
-                <div class="bg-light shadow" style="padding: 30px;">
-                    <div class="row align-items-center" style="min-height: 60px;">
-                        <div class="col-md-10">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="mb-3 mb-md-0">
-                                        <select class="custom-select px-4" style="height: 47px;">
-                                            <option selected>Destination</option>
-                                            <option value="1">Destination 1</option>
-                                            <option value="2">Destination 1</option>
-                                            <option value="3">Destination 1</option>
-                                        </select>
-                                    </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mx-auto"></div>
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Travel Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Bookings and Payments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--navbar end -->
+        <!--carousel start -->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/carousel-1.jpg" class="d-block w-100" alt="..." />
+                    <div class="overlay">
+                        <h1 class="typing-text fw-bold text-warning mb-4" data-text="Discover with us and make unforgettable memories."></h1>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/carousel-2.jpg" class="d-block w-100" alt="..." />
+                    <div class="overlay">
+                        <h1 class="fw-bold text-warning mb-2">QUEEN ELIZABETH NATIONAL PARK</h1>
+                        <button class="btn btn-success rounded-0">ASK FOR FLIGHT DEALS</button>
+                        <div class="badge-container rounded-0">
+                            <span class="badge-text">From $800 this May <i class="fa-regular fa-bell fa-flip" style="color: #000000;"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!---carousel end -->
+
+        <div class="container-fluid shadow-lg mb-5" id="booking">
+            <div class="row">
+                <div class="card rounded-0">
+                    <div class="row position-relative">
+                        <div class="d-md-flex col-md-3 bg-warning pe-5 p-sm-4 justify-content-end text-end align-items-center">
+                            <span>
+                                <span class="text-light">LIFETIME ADVENTURE</span>
+                                <h5 class="text-success">BOOK NOW</h5>
+                                <small>Services offered <i class="fa-solid fa-circle-down fa-bounce text-success" style="cursor: pointer;" onclick="services()"></i></small>
+                            </span>
+                        </div>
+                        <div class="col-md-9 py-3 position-relative">
+                            <i class="fa-regular fa-circle-xmark float-end fa-xl" id="closer" style="color: #fd0000;"></i>
+                            <form class="row g-3 justify-content-between mx-auto">
+                                <div class="col-md-2">
+                                    <label for="inputEmail4" class="form-label">From</label>
+                                    <input type="email" class="form-control form-control-sm ins" id="inputEmail4" />
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="mb-3 mb-md-0">
-                                        <div class="date" id="date1" data-target-input="nearest">
-                                            <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker" />
-                                        </div>
-                                    </div>
+                                <div class="col-md-2">
+                                    <label for="inputPassword4" class="form-label">Destination</label>
+                                    <input type="password" class="form-control form-control-sm ins" id="inputPassword4" />
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="mb-3 mb-md-0">
-                                        <div class="date" id="date2" data-target-input="nearest">
-                                            <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker" />
-                                        </div>
-                                    </div>
+                                <div class="col-md-2">
+                                    <label for="inputEmail4" class="form-label">Depature Date</label>
+                                    <input type="date" class="form-control form-control-sm ins" id="inputEmail4" />
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="mb-3 mb-md-0">
-                                        <select class="custom-select px-4" style="height: 47px;">
-                                            <option selected>Group size</option>
-                                            <option value="1">Less than 5</option>
-                                            <option value="2">5-10</option>
-                                            <option value="3">More than 10</option>
-                                        </select>
-                                    </div>
+                                <div class="col-md-2">
+                                    <label for="inputPassword4" class="form-label">Return Date</label>
+                                    <input type="date" class="form-control form-control-sm ins" id="inputPassword4" />
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" style="margin-top: 25px;" class="btn btn-success rounded-0">Book Now</button>
+                                </div>
+                            </form>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/cash.png" width="25" alt="price" />
+                                    <span class="more">
+                                        Competitive <br />
+                                        prices
+                                    </span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <img src="img/service.png" width="25" alt="price" />
+                                    <span class="more">
+                                        Best <br />
+                                        Service
+                                    </span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <img src="img/world.png" width="25" alt="price" />
+                                    <span class="more">
+                                        Worldwide <br />
+                                        Coverage
+                                    </span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-2">
-                            <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Book now</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Booking End -->
 
-        
-
-        <!-- Feature Start -->
-        <div class="container-fluid ">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="d-flex mb-4 mb-lg-0">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center mr-3" style="height: 100px; width: 100px;">
-                                <img src="img/cash.png" alt="">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <h5 class="">Competitive Pricing</h5>
-                                <p class="m-0">Unbeatable prices for top-quality travel experiences that fit any budget.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="d-flex mb-4 mb-lg-0">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center mr-3" style="height: 100px; width: 100px;">
-                                <img src="img/service.png" alt="">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <h5 class="">Best Services</h5>
-                                <p class="m-0">Exceptional service, meeting and exceeding expectations throughout the journey.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="d-flex mb-4 mb-lg-0">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center mr-3" style="height: 100px; width: 100px;">
-                                <img src="img/world.png" alt="">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <h5 class="">Worldwide Coverage</h5>
-                                <p class="m-0">Magna sit magna dolor duo dolor labore rebum amet elitr est diam sea</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Feature End -->
-
-
-        <div class="container-fluid mt-5">
-            <div class="container pt-2 ">
+        <!-- Service Start  -->
+        <div class="container-fluid pb-5 d-none" id="services">
+            <div class="container pt-5 pb-3">
                 <div class="text-center mb-3 pb-3">
-                    <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Destination</h6>
-                    <h1>Explore Top Destination</h1>
+                    <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
+                    <h1>Tours & Travel Services</h1>
                 </div>
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="col-lg- col-md- mb-4">
-                        <div class="package-item bg-white mb-2">
-                            <img class="img-fluid" src="img/package-1.jpg" alt="" />
-                            <div class="p-4">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
-                                    <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                    <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
-                                </div>
-                                <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                <div class="border-top mt-4 pt-4">
-                                    <div class="d-flex justify-content-between">
-                                        <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                        <h5 class="m-0">$350</h5>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-item bg-white text-center mb-2 py-2 rounded px-4">
+                            <img src="img/tourist.png" alt="" />
+                            <h5 class="mb-2">Travel Guide</h5>
+                            <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
                         </div>
                     </div>
-                    <div class="col-lg- col-md- mb-4">
-                        <div class="package-item bg-white mb-2">
-                            <img class="img-fluid" src="img/package-1.jpg" alt="" />
-                            <div class="p-4">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
-                                    <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                    <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
-                                </div>
-                                <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                <div class="border-top mt-4 pt-4">
-                                    <div class="d-flex justify-content-between">
-                                        <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                        <h5 class="m-0">$350</h5>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-item bg-white rounded text-center mb-2 py-2 px-4">
+                            <img src="img/ticket.png" alt="" />
+                            <h5 class="mb-2">Ticket Booking</h5>
+                            <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
                         </div>
                     </div>
-                    <div class="col-lg- col-md- mb-4">
-                        <div class="package-item bg-white mb-2">
-                            <img class="img-fluid" src="img/package-1.jpg" alt="" />
-                            <div class="p-4">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
-                                    <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                    <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
-                                </div>
-                                <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                <div class="border-top mt-4 pt-4">
-                                    <div class="d-flex justify-content-between">
-                                        <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                        <h5 class="m-0">$350</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg- col-md- mb-4">
-                        <div class="package-item bg-white mb-2">
-                            <img class="img-fluid" src="img/package-1.jpg" alt="" />
-                            <div class="p-4">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
-                                    <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                                    <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
-                                </div>
-                                <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
-                                <div class="border-top mt-4 pt-4">
-                                    <div class="d-flex justify-content-between">
-                                        <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                        <h5 class="m-0">$350</h5>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-item rounded bg-white text-center mb-2 py-2 px-4">
+                            <img src="img/hotel.png" alt="" />
+                            <h5 class="mb-2">Hotel Booking</h5>
+                            <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Service End -->
+
+
+
+
+
+
+
+
+        <div class="container-fluid  py-5">
+            <div class="container pb-3">
+                <div class="text-center mb-3 pb-3">
+                    <h6 class="text-warning text-uppercase">SPECIAL <img src="img/hot.png" width="25" alt="hot"></h6>
+                    <h1>POPULAR TRIPS</h1>
+                </div>
+                <section class="slider mb-3 position-relative">
+                    <div class="owl-carousel">
+                        <div>
+                            <div class="package-item bg-white mb-2">
+                                <img class="img-fluid" src="img/package-1.jpg" alt="">
+                                <div class="p-4 d-card card rounded-top-0">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-map-marker-alt text-danger me-2"></i>Phuket, Thailand</small>
+                                        <small class="m-0"><i class="fa fa-calendar-alt text-success me-2"></i>3 days</small>
+                                        <small class="m-0"><i class="fa fa-user text-success me-2"></i>2 People</small>
+                                    </div>
+                                    <span class="h6 text-decoration-none">Join us to the 3 days trip to Phuket. Explore the beauty of Thailand.</span>
+                                    <div class="text-center">
+                                        <button class="btn btn-sm btn-outline-success">Join now <i class="fa-solid fa-heart-circle-plus" style="color: #e71c0d;"></i></button>
+                                    </div>
+                                    <div class="border-top mt-2 pt-2">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="m-0"><i class="fa fa-star text-warning me-2"></i>3.3 <small>(50)</small></h6>
+                                            <h5 class="m-0">$300</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="package-item bg-white mb-2">
+                                <img class="img-fluid" src="img/package-2.jpg" alt="">
+                                <div class="p-4 d-card card rounded-top-0">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-map-marker-alt text-danger me-2"></i>Cuba</small>
+                                        <small class="m-0"><i class="fa fa-calendar-alt text-success me-2"></i>5 days</small>
+                                        <small class="m-0"><i class="fa fa-user text-success me-2"></i>1 People</small>
+                                    </div>
+                                    <span class="h6 text-decoration-none">Lets explore #Cuba</span>
+                                    <div class="text-center">
+                                        <button class="btn btn-sm btn-outline-success">Join now <i class="fa-solid fa-heart-circle-plus" style="color: #e71c0d;"></i></button>
+                                    </div>
+                                    <div class="border-top mt-2 pt-2">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="m-0"><i class="fa fa-star text-warning me-2"></i>4.0 <small>(150)</small></h6>
+                                            <h5 class="m-0">$550</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="package-item bg-white mb-2">
+                                <img class="img-fluid" src="img/package-3.jpg" alt="">
+                                <div class="p-4 d-card card rounded-top-0">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-map-marker-alt text-danger me-2"></i>Taj Mahal</small>
+                                        <small class="m-0"><i class="fa fa-calendar-alt text-success me-2"></i>4 days</small>
+                                        <small class="m-0"><i class="fa fa-user text-success me-2"></i>9 People</small>
+                                    </div>
+                                    <span class="h6 text-decoration-none">Discover new culture and wonderful moments ❤️</span>
+                                    <div class="text-center">
+                                        <button class="btn btn-sm btn-outline-success">Join now <i class="fa-solid fa-heart-circle-plus" style="color: #e71c0d;"></i></button>
+                                    </div>
+                                    <div class="border-top mt-2 pt-2">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="m-0"><i class="fa fa-star text-warning me-2"></i>5.0 <small>(30)</small></h6>
+                                            <h5 class="m-0">$1000</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="package-item bg-white mb-2">
+                                <img class="img-fluid" src="img/package-4.jpg" alt="">
+                                <div class="p-4 d-card card rounded-top-0">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <small class="m-0"><i class="fa fa-map-marker-alt text-danger me-2"></i>Peru</small>
+                                        <small class="m-0"><i class="fa fa-calendar-alt text-success me-2"></i>10 days</small>
+                                        <small class="m-0"><i class="fa fa-user text-success me-2"></i>10 People</small>
+                                    </div>
+                                    <span class="h6 text-decoration-none">Embark on a journey of a lifetime and discover breathtaking scenery, and unforgettable experiences</span>
+                                    <div class="text-center">
+                                        <button class="btn btn-sm btn-outline-success">Join now <i class="fa-solid fa-heart-circle-plus" style="color: #e71c0d;"></i></button>
+                                    </div>
+                                    <div class="border-top mt-2 pt-2">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="m-0"><i class="fa fa-star text-warning me-2"></i>3.5 <small>(10)</small></h6>
+                                            <h5 class="m-0">$150</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+
+<div class="container-fluid">
+    <div class="text-center">
+        <h6 class="text-warning">ATTENTION !!!</h6>
+        <h1>EXCLUSIVE VACATION</h1>
+    </div>
+    <div class="row">
+        <div class="col-12 pt-5 the-main text-center">
+            <h1 class="pt-5"><span class="text-warning">GET 10% </span><span class="text-light">DISCOUNT</span></h1>
+            <h5 class="text-light"> Celebrate your love with us on your Honeymoon and get a 10% discount on your next trip</h5>
+            <form class="row g-3 mt-4 px-2">
+                <div class="col-md-4 mx-auto">
+                  <input type="text" class="form-control married rounded-0 text-warning" style="background: transparent;" placeholder="Mr. " id="inputEmail4">
+                </div>
+                <div class="col-md-4 mx-auto">
+                  <input type="text" class="form-control married text-warning  rounded-0" style="background: transparent;" placeholder="Mrs. " id="inputPassword4">
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-warning rounded-0 text-light">Apply now</button>
+                </div>
+            </form>
         </div>
         
+    </div>
+</div>
 
 
-            <!-- Service Start  -->
-            <div class="container-fluid py-5">
-                <div class="container pt-5 pb-3">
-                    <div class="text-center mb-3 pb-3">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
-                        <h1>Tours & Travel Services</h1>
+
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer py-0 px-sm-3 px-lg-5" style="margin-top: 90px;">
+            <div class="row pt-4">
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <a href="" class="navbar-brand">
+                        <img src="img/bara.png" width="150" alt="">
+                    </a>
+                    <p>Sed ipsum clita tempor ipsum ipsum amet sit ipsum lorem amet labore rebum lorem ipsum dolor. No sed vero lorem dolor dolor</p>
+                    <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                    <div class="d-flex justify-content-start">
+                        <a class="me-3" href="#"><img src="img/fb.png" width="35" alt=""></a>
+                        <a class="me-3" href="#"><img src="img/tw.png" width="35" alt=""></a>                     
+                        <a class="" href="#"><img src="img/ig.png" width="35" alt=""></a>                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5 class="text-white text-uppercase mb-2">Our Services</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Destination</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Services</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Packages</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Guides</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Testimonial</a>
+                        <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Blog</a>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="service-item bg-white text-center mb-2 py-2 rounded px-4">
-                                <img src="img/tourist.png" alt="">
-                                <h5 class="mb-2">Travel Guide</h5>
-                                <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="service-item bg-white rounded text-center mb-2 py-2 px-4">
-                                <img src="img/ticket.png" alt="">
-                                <h5 class="mb-2">Ticket Booking</h5>
-                                <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="service-item rounded bg-white text-center mb-2 py-2 px-4">
-                                <img src="img/hotel.png" alt="">
-                                <h5 class="mb-2">Hotel Booking</h5>
-                                <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5 class="text-white text-uppercase mb-2">Useful Links</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Destination</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Services</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Packages</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Guides</a>
+                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Testimonial</a>
+                        <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Blog</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5 class="text-white text-uppercase mb-2">Contact Us</h5>
+                    <p><i class="fa fa-map-marker-alt me-2"></i>123 Street,Kampala Uganda</p>
+                    <p><i class="fa fa-phone-alt me-2"></i>+256 345 67890</p>
+                    <p><i class="fa fa-envelope me-2"></i>info@example.com</p>
+                    <h6 class="text-white text-uppercase mt-4">Subscribe to our Newsletter</h6>
+                    <div class="w-100">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-light" placeholder="Your Email" />
+                            <div class="input-group-append">
+                                <button class="btn btn-warning rounded-0">Subscribe</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Service End -->
-
-           
-            <!-- Registration Start -->
-            <div class="container-fluid bg-registration py-5" style="margin: 0px 0;">
-                <div class="container py-1">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7 mb-5 mb-lg-0">
-                            <div class="mb-4">
-                                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Mega Offer</h6>
-                                <h1 class="text-white"><span class="text-primary">30% OFF</span> For Honeymoon</h1>
-                            </div>
-                            <p class="text-white">
-                                Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor
-                            </p>
-                            <ul class="list-inline text-white m-0">
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor amet diam</li>
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-5" style="background: transparent;">
-                            <div class="card shadow-lg rounded" style="background-color: transparent;">
-                                
-                                <div class="card-body rounded-bottom">
-                                    <form>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control rounded " placeholder="Your name" required="required" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control rounded" placeholder="Your email" required="required" />
-                                        </div>
-                                        <div class="form-group">
-                                            <select class="custom-select rounded" 
-                                                <option selected>Select a destination</option>
-                                                <option value="1">destination 1</option>
-                                                <option value="2">destination 1</option>
-                                                <option value="3">destination 1</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <button class="btn btn-primary rounded" style="float: right;" type="submit">Sign Up Now</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Registration End -->
-
-            <!-- Testimonial Start -->
-            <div class="container-fluid ">
-                <div class="container pt-5">
-                    <div class="text-center mb-3 pb-3">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h6>
-                        <h1>What Say Our Clients</h1>
-                    </div>
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="text-center pb-4">
-                            <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-1.jpg" style="width: 100px; height: 100px;" />
-                            <div class="testimonial-text bg-primary p-4 mt-n5">
-                                <p class="mt-5 text-light">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                                <h5 class="text-truncate">Client Name</h5>
-                                <span>Profession</span>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-2.jpg" style="width: 100px; height: 100px;" />
-                            <div class="testimonial-text bg-primary p-4 mt-n5">
-                                <p class="mt-5 text-light">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                                <h5 class="text-truncate">Client Name</h5>
-                                <span>Profession</span>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-3.jpg" style="width: 100px; height: 100px;" />
-                            <div class="testimonial-text bg-primary p-4 mt-n5">
-                                <p class="mt-5 text-light">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                                <h5 class="text-truncate">Client Name</h5>
-                                <span>Profession</span>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-4.jpg" style="width: 100px; height: 100px;" />
-                            <div class="testimonial-text bg-primary p-4 mt-n5">
-                                <p class="mt-5 text-light">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                                <h5 class="text-truncate">Client Name</h5>
-                                <span>Profession</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Testimonial End -->
-
-            <!-- Blog Start -->
-            <div class="container-fluid py-5">
-                <div class="container pt-5 pb-3">
-                    <div class="text-center mb-3 pb-3">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Our Blog</h6>
-                        <h1>Latest From Our Blog</h1>
-                    </div>
-                    <div class="row pb-3">
-                        <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid w-100" src="img/blog-1.jpg" alt="" />
-                                    <div class="blog-date">
-                                        <h6 class="font-weight-bold mb-n1">01</h6>
-                                        <small class="text-white text-uppercase">Jan</small>
-                                    </div>
-                                </div>
-                                <div class="bg-white p-4">
-                                    <div class="d-flex mb-2">
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                        <span class="text-primary px-2">|</span>
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                                    </div>
-                                    <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid w-100" src="img/blog-2.jpg" alt="" />
-                                    <div class="blog-date">
-                                        <h6 class="font-weight-bold mb-n1">06</h6>
-                                        <small class="text-white text-uppercase">Jan</small>
-                                    </div>
-                                </div>
-                                <div class="bg-white p-4">
-                                    <div class="d-flex mb-2">
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                        <span class="text-primary px-2">|</span>
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                                    </div>
-                                    <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                            <div class="blog-item">
-                                <div class="position-relative">
-                                    <img class="img-fluid w-100" src="img/blog-3.jpg" alt="" />
-                                    <div class="blog-date">
-                                        <h6 class="font-weight-bold mb-n1">10</h6>
-                                        <small class="text-white text-uppercase">Jan</small>
-                                    </div>
-                                </div>
-                                <div class="bg-white p-4">
-                                    <div class="d-flex mb-2">
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                        <span class="text-primary px-2">|</span>
-                                        <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                                    </div>
-                                    <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Blog End -->
-
-            <!-- Footer Start -->
-            <div class="container-fluid bg-dark text-white-50 py-0 px-sm-3 px-lg-5" style="margin-top: 90px;">
-                <div class="row pt-4">
-                    <div class="col-lg-3 col-md-6 mb-5">
-                        <a href="" class="navbar-brand">
-                            <h1 class="text-primary"><span class="text-white">BARA</span>BARA</h1>
-                        </a>
-                        <p>Sed ipsum clita tempor ipsum ipsum amet sit ipsum lorem amet labore rebum lorem ipsum dolor. No sed vero lorem dolor dolor</p>
-                        <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
-                        <div class="d-flex justify-content-start">
-                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5">
-                        <h5 class="text-white text-uppercase mb-2">Our Services</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                            <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5">
-                        <h5 class="text-white text-uppercase mb-2">Useful Links</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                            <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-5">
-                        <h5 class="text-white text-uppercase mb-2">Contact Us</h5>
-                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street,Kampala Uganda</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+256 345 67890</p>
-                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
-                        <h6 class="text-white text-uppercase mt-4">Subscribe to our Newsletter</h6>
-                        <div class="w-100">
-                            <div class="input-group">
-                                <input type="text" class="form-control  border-light" placeholder="Your Email" />
-                                <div class="input-group-append">
-                                    <button class="btn  btn-primary ">Sign Up</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, 0.1) !important;">
-                <div class="row">
-                    <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                        <p class="m-0 text-white-50">Copyright &copy; <a href="#">Barabara Safari</a>. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-lg-6 text-center text-md-right">
-                        <p class="m-0 text-white-50">BaraBara Safari</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer End -->
-
-            <!-- Back to Top -->
-            <a href="#" class="btn btn-lg btn-lg-square back-to-top"><i class="fa text-primary fa-angle-double-up"></i></a>
-
-            <!-- JavaScript Libraries -->
-            <script src="js/whatsapp.js"></script>
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-            <script src="lib/easing/easing.min.js"></script>
-            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-            <script src="lib/tempusdominus/js/moment.min.js"></script>
-            <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-            <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-            <!-- Contact Javascript File -->
-            <script src="mail/jqBootstrapValidation.min.js"></script>
-            <script src="mail/contact.js"></script>
-            <script>
-                $(document).ready(function(){    $(".owl-carousel").owlCarousel();
-})
-            </script>
-            <!-- Template Javascript -->
-            <script src="js/main.js"></script>
         </div>
+        <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, 0.1) !important;">
+            <div class="row">
+                <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white-50">Copyright &copy; <a href="#" class="text-warning text-decoration-none">Barabara Safari</a>. All Rights Reserved.</p>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+
+        <script src="js/main.js"></script>
+        <script src="js/whatsapp.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </body>
 </html>
