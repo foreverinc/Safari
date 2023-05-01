@@ -1,140 +1,136 @@
-*{
-  font-family: 'Poppins', sans-serif;
-}
-
-.logo{
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  object-fit: cover;
-}
-nav{
-  background: transparent;
-  z-index: 10000;
-  transition: .6s;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 100px;
-}
-nav.sticky{
-  padding: 5px 100px;
-  background: #fff;
-}
-.carousel-item .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.123);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  padding: 20px;
-}
-.bg-change{
-  background-color: rgba(0, 0, 0, 0.534);
-}
-.logos{
-  width: 6rem;
-  height: 2rem;
-}
-
-
-.overlay {
-  position: relative;
-}
-
-.badge-container {
-  position: absolute;
-  left: 20px;
-  top: 25%;
-  background-color: #ca982caf;
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-}
-
-
-.badge-text {
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0 10px;
-}
-.collapse ul li a:hover{
-  color:#ca972c !important;
-}
-.collapse ul li a{
-  transition: .6s !important;
-}
-@media (max-width: 768px) {
-  .carousel-item img {
-    height: 80vh;
+* {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .logo {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
     object-fit: cover;
   }
-}
-
-#closer{
-  cursor: pointer;
-  top: 20px;
-  float: right;
-}
-.more{
-  font-size: .75rem;
-  line-height: 15px;
-}
-.ins{
-  border-radius: 0 !important;
-}
-.form-label{
-  font-size: .85rem !important;
-}
-
-
-
-
-.owl-nav .owl-next{
-  position: absolute;
-  top: calc(40% - 25px);
-  right: -20px;
-  opacity: 1;
-  font-size: 30px !important;
-  z-index: 1;
-}
-.owl-nav .owl-prev{
-  position: absolute;
-  top: calc(40% - 25px);
-  left: -20px;
-  opacity: 1;
-  font-size: 30px !important;
-  z-index: 1;
-}
-
-.the-main{
-  background: linear-gradient(rgba(0, 0, 0, 0.521),rgba(0, 0, 0, 0.603)), url(../img/married.png);
-  background-position: center;
-  background-size: cover;
-  min-height: 50vh;
-}
-@media (min-width:899px){
-  .the-main{
+  nav {
+    background: transparent;
+    z-index: 10000;
+    transition: 0.6s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+  }
+  nav.sticky {
+    padding: 5px 100px;
+    background: #fff;
+  }
+  .carousel-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.123);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+  }
+  .bg-change {
+    background-color: rgba(0, 0, 0, 0.534);
+  }
+  .logos {
+    width: 6rem;
+    height: 2rem;
+  }
+  
+  .overlay {
+    position: relative;
+  }
+  
+  .badge-container {
+    position: absolute;
+    left: 20px;
+    top: 25%;
+    background-color: #ca982caf;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .badge-text {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  .collapse ul li a:hover {
+    color: #ca972c !important;
+  }
+  .collapse ul li a {
+    transition: 0.6s !important;
+  }
+  @media (max-width: 768px) {
+    .carousel-item img {
+        height: 80vh;
+        object-fit: cover;
+    }
+  }
+  
+  #closer {
+    cursor: pointer;
+    top: 20px;
+    float: right;
+  }
+  .more {
+    font-size: 0.75rem;
+    line-height: 15px;
+  }
+  .ins {
+    border-radius: 0 !important;
+  }
+  .form-label {
+    font-size: 0.85rem !important;
+  }
+  
+  .owl-nav .owl-next {
+    position: absolute;
+    top: calc(40% - 25px);
+    right: -20px;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+  }
+  .owl-nav .owl-prev {
+    position: absolute;
+    top: calc(40% - 25px);
+    left: -20px;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+  }
+  
+  .the-main {
+    background: linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.603)), url(../img/married.png);
+    background-position: center;
+    background-size: cover;
     min-height: 50vh;
   }
-}
-
-.married::placeholder{
-  color: rgb(212, 175, 10);
-}
-
-.footer a{
-  text-decoration: none !important;
-}
+  @media (min-width: 899px) {
+    .the-main {
+        min-height: 50vh;
+    }
+  }
+  
+  .married::placeholder {
+    color: rgb(212, 175, 10);
+  }
+  
+  .footer a {
+    text-decoration: none !important;
+  }
+  
