@@ -37,23 +37,18 @@ setInterval(function () {
     }
 }, typingSpeed);
 
-document.getElementById("closer").addEventListener("click", function () {
-    document.getElementById("booking").classList.add("d-none");
-});
-
-function services() {
-    var servicesSection = document.getElementById("services");
-    servicesSection.classList.remove("d-none");
-    servicesSection.scrollIntoView({ behavior: "smooth" });
-}
 
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
         loop: true,
         margin: 10,
         responsiveClass: true,
+        autoplay:true,
+        autoplayTimeout:5000, 
         center: true,
         nav: true,
+        center:true,
+        items:3,
         navText: ['<i class="fa-solid fa-angles-left  text-success"></i>', '<i class="fa-solid fa-angles-right  text-success"></i>'],
         responsive: {
             0: {
@@ -63,7 +58,7 @@ $(document).ready(function () {
                 items: 3,
             },
             1000: {
-                items: 3,
+                items: 4,
             },
         },
     });
@@ -78,3 +73,28 @@ for (var i = 0; i < cards.length; i++) {
         this.classList.remove("shadow-lg");
     });
 }
+
+
+
+const titleElement = document.querySelector('#queen');
+const buttonElement = document.querySelector('#btns');
+const titleText = 'Queen Elizabeth National Park';
+let index = 0;
+let isTyping = true;
+
+const typeTitle = () => {
+  if (index <= titleText.length && isTyping) {
+    titleElement.textContent = titleText.slice(0, index) + '_';
+    index++;
+    setTimeout(typeTitle, 100);
+  } else {
+    isTyping = false;
+    titleElement.textContent = titleText;
+    buttonElement.style.display = 'flex';
+  }
+}
+
+setTimeout(typeTitle, 6000);
+
+
+

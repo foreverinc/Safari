@@ -12,9 +12,9 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
 
         <link
             rel="stylesheet"
@@ -34,10 +34,9 @@
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark pt-1 p-md-3">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="img/logo.jpg" class="logo" alt="" />
-                    <img src="img/bara.png" class="logos" alt="" />
+                    <img src="img/logo.png" class="logo" alt="logo" />
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler border-warning border border-2 text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -45,19 +44,22 @@
                     <div class="mx-auto"></div>
                     <ul class="navbar-nav gap-3">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Travel Deals</a>
+                            <a class="nav-link text-white fw-bold" href="#">Travel Deals</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Bookings and Payments</a>
+                            <a class="nav-link text-white fw-bold" href="#">Bookings and Payments</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Blog</a>
+                            <a class="nav-link text-white fw-bold" href="#">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">About</a>
+                            <a class="nav-link text-white fw-bold" href="#">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Contact</a>
+                            <a class="nav-link text-white fw-bold" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white fw-bold" href="#">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -65,21 +67,25 @@
         </nav>
         <!--navbar end -->
         <!--carousel start -->
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="img/carousel-1.jpg" class="d-block w-100" alt="..." />
                     <div class="overlay">
-                        <h1 class="typing-text fw-bold text-warning mb-4" data-text="Discover with us and make unforgettable memories."></h1>
+                        <h1 class="typing-text fw-bold text-warning tit mb-4" data-text="Discover with us and make unforgettable memories."></h1>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="img/carousel-2.jpg" class="d-block w-100" alt="..." />
                     <div class="overlay">
-                        <h1 class="fw-bold text-warning mb-2">QUEEN ELIZABETH NATIONAL PARK</h1>
-                        <button class="btn btn-success rounded-0">ASK FOR FLIGHT DEALS</button>
+                        <h1 class="fw-bold text-warning text-start tit mb-2" id="queen"></h1>
+                        <div id="btns" class="d-flex justify-content-between gap-5 align-items-center" style="display: none;">
+                            <button class="btn btn-sm btn-success me-2 rounded-0">BOOK NOW</button>
+                            <button class="btn btn-sm btn-dark rounded-0">INQUIRE</button>
+                        </div>
+
                         <div class="badge-container rounded-0">
-                            <span class="badge-text">From $800 this May <i class="fa-regular fa-bell fa-flip" style="color: #000000;"></i></span>
+                            <span class="offer">From $800 this May <i class="fa-regular fa-bell fa-flip" style="color: #000000;"></i></span>
                         </div>
                     </div>
                 </div>
@@ -93,106 +99,57 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+
         <!---carousel end -->
 
         <div class="container-fluid shadow-lg mb-5" id="booking">
             <div class="row">
                 <div class="card rounded-0">
                     <div class="row position-relative">
-                        <div class="d-md-flex col-md-3 bg-warning pe-5 p-sm-4 justify-content-end text-end align-items-center">
-                            <span>
-                                <span class="text-light">LIFETIME ADVENTURE</span>
-                                <h5 class="text-success">BOOK NOW</h5>
-                                <small>Services offered <i class="fa-solid fa-circle-down fa-bounce text-success" style="cursor: pointer;" onclick="services()"></i></small>
-                            </span>
-                        </div>
-                        <div class="col-md-9 py-3 position-relative">
-                            <i class="fa-regular fa-circle-xmark float-end fa-xl" id="closer" style="color: #fd0000;"></i>
-                            <form class="row g-3 justify-content-between mx-auto">
-                                <div class="col-md-2">
-                                    <label for="inputEmail4" class="form-label">From</label>
-                                    <input type="email" class="form-control form-control-sm ins" id="inputEmail4" />
-                                </div>
-                                <div class="col-md-2">
-                                    <label for="inputPassword4" class="form-label">Destination</label>
-                                    <input type="password" class="form-control form-control-sm ins" id="inputPassword4" />
-                                </div>
-                                <div class="col-md-2">
-                                    <label for="inputEmail4" class="form-label">Depature Date</label>
-                                    <input type="date" class="form-control form-control-sm ins" id="inputEmail4" />
-                                </div>
-                                <div class="col-md-2">
-                                    <label for="inputPassword4" class="form-label">Return Date</label>
-                                    <input type="date" class="form-control form-control-sm ins" id="inputPassword4" />
-                                </div>
-                                <div class="col-md-2">
-                                    <button type="submit" style="margin-top: 25px;" class="btn btn-success rounded-0">Book Now</button>
-                                </div>
-                            </form>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <div class="d-flex align-items-center">
-                                    <img src="img/cash.png" width="25" alt="price" />
-                                    <span class="more">
-                                        Competitive <br />
-                                        prices
-                                    </span>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <img src="img/service.png" width="25" alt="price" />
-                                    <span class="more">
-                                        Best <br />
-                                        Service
-                                    </span>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <img src="img/world.png" width="25" alt="price" />
-                                    <span class="more">
-                                        Worldwide <br />
-                                        Coverage
-                                    </span>
-                                </div>
+                        <div class="col-md-10 shadow-lg pe-5 p-2" style="background-color: #ca972c;">
+                            <div class="text-center mt-0"><h6 class="text-uppercase fw-bold text-muted">Top Tourist Attractions In UGANDA</h6></div>
+                            <div class="d-none d-md-flex align-items-center justify-content-between the-links">
+                                <ul>
+                                    <li><a href="">Murchison Falls National Park</a></li>
+                                    <li><a href="">Queen Elizabeth National Park</a></li>
+                                    <li><a href="">Bwindi Impenetrable Forest</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="">Kampala</a></li>
+                                    <li><a href="">Sipi Falls</a></li>
+                                    <li><a href="">Rwenzori Mountains National Park</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="">Kidepo National Park Uganda</a></li>
+                                    <li><a href="">Lake Victoria</a></li>
+                                    <li><a href="">Gorilla Island sanctuary uganda</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="d-md-none the-links">
+                                <ul>
+                                    <li><a href="">Murchison Falls National Park</a></li>
+                                    <li><a href="">Queen Elizabeth National Park</a></li>
+                                    <li><a href="">Bwindi Impenetrable Forest</a></li>
+                                    <li><a href="">Kampala</a></li>
+                                    <li><a href="">Sipi Falls</a></li>
+                                    <li><a href="">Rwenzori Mountains National Park</a></li>
+                                    <li><a href="">Kidepo National Park Uganda</a></li>
+                                    <li><a href="">Lake Victoria</a></li>
+                                    <li><a href="">Gorilla Island sanctuary uganda</a></li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Service Start  -->
-        <div class="container-fluid pb-5 d-none" id="services">
-            <div class="container pt-5 pb-3">
-                <div class="text-center mb-3 pb-3">
-                    <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
-                    <h1>Tours & Travel Services</h1>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-item bg-white text-center mb-2 py-2 rounded px-4">
-                            <img src="img/tourist.png" alt="" />
-                            <h5 class="mb-2">Travel Guide</h5>
-                            <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-item bg-white rounded text-center mb-2 py-2 px-4">
-                            <img src="img/ticket.png" alt="" />
-                            <h5 class="mb-2">Ticket Booking</h5>
-                            <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="service-item rounded bg-white text-center mb-2 py-2 px-4">
-                            <img src="img/hotel.png" alt="" />
-                            <h5 class="mb-2">Hotel Booking</h5>
-                            <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
+                        <div class="col-md-2 d-flex justify-content-center align-items-center py-3">
+                            <button class="btn btn-outline-success btn-lg rounded-0 fw-bold">BOOK NOW</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Service End -->
 
-        <div class="container-fluid py-5">
+       
+        <div class="container-fluid ">
             <div class="container pb-3">
                 <div class="text-center mb-3 pb-3">
                     <h6 class="text-warning text-uppercase">SPECIAL <img src="img/hot.png" width="25" alt="hot" /></h6>
@@ -200,94 +157,101 @@
                 </div>
                 <section class="slider mb-3 position-relative">
                     <div class="owl-carousel">
-                        <div>
-                            <div class="package-item bg-white mb-2">
-                                <img class="img-fluid" src="img/package-1.jpg" alt="" />
-                                <div class="p-4 d-card card rounded-top-0">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <small class="m-0"><i class="fa fa-map-marker-alt text-danger me-2"></i>Phuket, Thailand</small>
-                                        <small class="m-0"><i class="fa fa-calendar-alt text-success me-2"></i>3 days</small>
-                                        <small class="m-0"><i class="fa fa-user text-success me-2"></i>2 People</small>
+                        <div class="">
+                            <div class="card slider-card mx-auto shadow-sm position-relative" style="width: 18rem;">
+                                <img src="img/package-4.jpg" class="card-img-top" alt="..." />
+                                <div class="card-body pt-1 position-relative">
+                                    <div class="d-flex justify-content-between align-items-center gap-2">
+                                        <small class="m-0"> <i class="fa fa-map-marker-alt text-danger me-1"></i>Taj Mahal </small>
+                                        <small class="m-0"> <i class="fa fa-calendar-alt text-success me-1"></i>4 days </small>
+                                        <small class="m-0"> <i class="fa fa-user text-success me-1"></i>9 People </small>
                                     </div>
-                                    <span class="h6 text-decoration-none">Join us to the 3 days trip to Phuket. Explore the beauty of Thailand.</span>
-                                    <div class="text-center">
-                                        <button class="btn btn-sm btn-outline-success">Join now <i class="fa-solid fa-heart-circle-plus" style="color: #e71c0d;"></i></button>
-                                    </div>
-                                    <div class="border-top mt-2 pt-2">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="m-0"><i class="fa fa-star text-warning me-2"></i>3.3 <small>(50)</small></h6>
-                                            <h5 class="m-0">$300</h5>
-                                        </div>
+                                    <span class="words">Discover new culture and wonderful moments ❤️</span>
+                                    <div class="d-flex justify-content-between socials mt-3">
+                                        <a class="me-3" href="#"><img src="img/fb.png" width="20" alt="" /></a>
+                                        <a class="me-3" href="#"><img src="img/tw.png" width="20" alt="" /></a>
+                                        <a class="" href="#"><img src="img/ig.png" width="20" alt="" /></a>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div>
-                            <div class="package-item bg-white mb-2">
-                                <img class="img-fluid" src="img/package-2.jpg" alt="" />
-                                <div class="p-4 d-card card rounded-top-0">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <small class="m-0"><i class="fa fa-map-marker-alt text-danger me-2"></i>Cuba</small>
-                                        <small class="m-0"><i class="fa fa-calendar-alt text-success me-2"></i>5 days</small>
-                                        <small class="m-0"><i class="fa fa-user text-success me-2"></i>1 People</small>
-                                    </div>
-                                    <span class="h6 text-decoration-none">Lets explore #Cuba</span>
-                                    <div class="text-center">
-                                        <button class="btn btn-sm btn-outline-success">Join now <i class="fa-solid fa-heart-circle-plus" style="color: #e71c0d;"></i></button>
-                                    </div>
-                                    <div class="border-top mt-2 pt-2">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="m-0"><i class="fa fa-star text-warning me-2"></i>4.0 <small>(150)</small></h6>
-                                            <h5 class="m-0">$550</h5>
-                                        </div>
-                                    </div>
+                                <div class="card-footer d-flex justify-content-between align-items-center">
+                                    <h6 class="m-0"><i class="fa fa-star text-warning me-2"></i>5.0 <small>(30)</small></h6>
+                                    <h6 class="m-0">$1000</h6>
                                 </div>
+                                <a href="#" class="stretched-link"></a>
                             </div>
                         </div>
-                        <div>
-                            <div class="package-item bg-white mb-2">
-                                <img class="img-fluid" src="img/package-3.jpg" alt="" />
-                                <div class="p-4 d-card card rounded-top-0">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <small class="m-0"><i class="fa fa-map-marker-alt text-danger me-2"></i>Taj Mahal</small>
-                                        <small class="m-0"><i class="fa fa-calendar-alt text-success me-2"></i>4 days</small>
-                                        <small class="m-0"><i class="fa fa-user text-success me-2"></i>9 People</small>
+                        <div class="">
+                            <div class="card slider-card  mx-auto shadow-sm position-relative" style="width: 18rem;">
+                                <img src="img/package-4.jpg" class="card-img-top" alt="..." />
+                                <div class="card-body pt-1 position-relative">
+                                    <div class="d-flex justify-content-between align-items-center gap-2">
+                                        <small class="m-0"> <i class="fa fa-map-marker-alt text-danger me-1"></i>Taj Mahal </small>
+                                        <small class="m-0"> <i class="fa fa-calendar-alt text-success me-1"></i>4 days </small>
+                                        <small class="m-0"> <i class="fa fa-user text-success me-1"></i>9 People </small>
                                     </div>
-                                    <span class="h6 text-decoration-none">Discover new culture and wonderful moments ❤️</span>
-                                    <div class="text-center">
-                                        <button class="btn btn-sm btn-outline-success">Join now <i class="fa-solid fa-heart-circle-plus" style="color: #e71c0d;"></i></button>
-                                    </div>
-                                    <div class="border-top mt-2 pt-2">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="m-0"><i class="fa fa-star text-warning me-2"></i>5.0 <small>(30)</small></h6>
-                                            <h5 class="m-0">$1000</h5>
-                                        </div>
+                                    <span class="words">Discover new culture and wonderful moments ❤️</span>
+                                    <div class="d-flex justify-content-between socials mt-3">
+                                        <a class="me-3" href="#"><img src="img/fb.png" width="20" alt="" /></a>
+                                        <a class="me-3" href="#"><img src="img/tw.png" width="20" alt="" /></a>
+                                        <a class="" href="#"><img src="img/ig.png" width="20" alt="" /></a>
                                     </div>
                                 </div>
+                                <div class="card-footer d-flex justify-content-between align-items-center">
+                                    <h6 class="m-0"><i class="fa fa-star text-warning me-2"></i>5.0 <small>(30)</small></h6>
+                                    <h6 class="m-0">$1000</h6>
+                                </div>
+                                <a href="#" class="stretched-link"></a>
                             </div>
                         </div>
-                        <div>
-                            <div class="package-item bg-white mb-2">
-                                <img class="img-fluid" src="img/package-4.jpg" alt="" />
-                                <div class="p-4 d-card card rounded-top-0">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <small class="m-0"><i class="fa fa-map-marker-alt text-danger me-2"></i>Peru</small>
-                                        <small class="m-0"><i class="fa fa-calendar-alt text-success me-2"></i>10 days</small>
-                                        <small class="m-0"><i class="fa fa-user text-success me-2"></i>10 People</small>
+                        <div class="">
+                            <div class="card slider-card mx-auto shadow-sm position-relative" style="width: 18rem;">
+                                <img src="img/package-4.jpg" class="card-img-top" alt="..." />
+                                <div class="card-body pt-1 position-relative">
+                                    <div class="d-flex justify-content-between align-items-center gap-2">
+                                        <small class="m-0"> <i class="fa fa-map-marker-alt text-danger me-1"></i>Taj Mahal </small>
+                                        <small class="m-0"> <i class="fa fa-calendar-alt text-success me-1"></i>4 days </small>
+                                        <small class="m-0"> <i class="fa fa-user text-success me-1"></i>9 People </small>
                                     </div>
-                                    <span class="h6 text-decoration-none">Embark on a journey of a lifetime and discover breathtaking scenery, and unforgettable experiences</span>
-                                    <div class="text-center">
-                                        <button class="btn btn-sm btn-outline-success">Join now <i class="fa-solid fa-heart-circle-plus" style="color: #e71c0d;"></i></button>
-                                    </div>
-                                    <div class="border-top mt-2 pt-2">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="m-0"><i class="fa fa-star text-warning me-2"></i>3.5 <small>(10)</small></h6>
-                                            <h5 class="m-0">$150</h5>
-                                        </div>
+                                    <span class="words">Discover new culture and wonderful moments ❤️</span>
+                                    <div class="d-flex justify-content-between socials mt-3">
+                                        <a class="me-3" href="#"><img src="img/fb.png" width="20" alt="" /></a>
+                                        <a class="me-3" href="#"><img src="img/tw.png" width="20" alt="" /></a>
+                                        <a class="" href="#"><img src="img/ig.png" width="20" alt="" /></a>
                                     </div>
                                 </div>
+                                <div class="card-footer d-flex justify-content-between align-items-center">
+                                    <h6 class="m-0"><i class="fa fa-star text-warning me-2"></i>5.0 <small>(30)</small></h6>
+                                    <h6 class="m-0">$1000</h6>
+                                </div>
+                                <a href="#" class="stretched-link"></a>
                             </div>
+                        </div>
+                        <div class="">
+                            <div class="card slider-card mx-auto shadow-sm position-relative" style="width: 18rem;">
+                                <img src="img/package-4.jpg" class="card-img-top" alt="..." />
+                                <div class="card-body pt-1 position-relative">
+                                    <div class="d-flex justify-content-between align-items-center gap-2">
+                                        <small class="m-0"> <i class="fa fa-map-marker-alt text-danger me-1"></i>Taj Mahal </small>
+                                        <small class="m-0"> <i class="fa fa-calendar-alt text-success me-1"></i>4 days </small>
+                                        <small class="m-0"> <i class="fa fa-user text-success me-1"></i>9 People </small>
+                                    </div>
+                                    <span class="words">Discover new culture and wonderful moments ❤️</span>
+                                    <div class="d-flex justify-content-between socials mt-3">
+                                        <a class="me-3" href="#"><img src="img/fb.png" width="20" alt="" /></a>
+                                        <a class="me-3" href="#"><img src="img/tw.png" width="20" alt="" /></a>
+                                        <a class="" href="#"><img src="img/ig.png" width="20" alt="" /></a>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between align-items-center">
+                                    <h6 class="m-0"><i class="fa fa-star text-warning me-2"></i>5.0 <small>(30)</small>
+                                    </h6>
+                                    <h6 class="m-0">$1000</h6>
+                                </div>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        
+                            <div style="height: 5rem;"></div>
                         </div>
                     </div>
                 </section>
@@ -297,26 +261,103 @@
         <div class="container-fluid">
             <div class="text-center">
                 <h6 class="text-warning">ATTENTION !!!</h6>
-                <h1>EXCLUSIVE VACATION</h1>
+                <h1>EXCLUSIVE VACATIONS</h1>
             </div>
             <div class="row">
-                <div class="col-12 pt-5 the-main text-center">
-                    <h1 class="pt-5"><span class="text-warning">GET 10% </span><span class="text-light">DISCOUNT</span></h1>
-                    <h5 class="text-light">Celebrate your love with us on your Honeymoon and get a 10% discount on your next trip</h5>
+                <div class="col-md-6 py-3 mb-4">
+                    <h5 class="text-center text-warning text-uppercase">Check out our latest</h5>
+                    <div class="d-flex justify-content-center gap-2 align-items-center" style="flex-wrap: wrap;">
+                        <a href="">
+                        <div class="card card-c" style="width: 18rem;">
+                            <img src="img/package-1.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                              <h5 class="card-title text-warning text-center">UGANDA</h5>
+                            </div>
+                        </div>
+                        </a> 
+                        <a href="">
+                        <div class="card card-c" style="width: 18rem;">
+                            <img src="img/package-2.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                              <h5 class="card-title text-warning text-center">KENYA</h5>
+                            </div>
+                        </div>
+                        </a>
+                        <a href="">
+                        <div class="card card-c" style="width: 18rem;">
+                            <img src="img/package-3.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                              <h5 class="card-title text-warning text-center">TANZANIA</h5>
+                            </div>
+                        </div>
+                         </a> 
+                         <a href="">
+                        <div class="card card-c" style="width: 18rem;">
+                            <img src="img/package-4.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                              <h5 class="card-title text-warning text-center">RWANDA</h5>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 pt-2 the-main text-center">
+                    <h1 class="pt-5"><span class="text-warning">INQUIRE </span><span class="text-light">FROM US</span></h1>
+                    <h6 class="text-light">Feel free to get in touch with us. We're always happy to hear from you and will do our best to respond to your inquiry as soon as possible.</h6>
                     <form class="row g-3 mt-4 px-2 pb-5">
                         <div class="col-md-4 mx-auto">
-                            <input type="text" class="form-control married rounded-0 text-warning" style="background: transparent;" placeholder="Mr. " id="inputEmail4" />
+                            <input type="text" class="form-control married rounded-0 text-warning" style="background: transparent;" placeholder="Full Name " id="inputEmail4" />
                         </div>
                         <div class="col-md-4 mx-auto">
-                            <input type="text" class="form-control married text-warning rounded-0" style="background: transparent;" placeholder="Mrs. " id="inputPassword4" />
+                            <input type="email" class="form-control married text-warning rounded-0" style="background: transparent;" placeholder="Email address " id="inputPassword4" />
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control married" style="background-color: transparent;" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-warning rounded-0 text-light">Apply now</button>
+                            <button class="btn btn-warning rounded-0 text-light">Send <i class="fa-solid fa-paper-plane"></i></button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+
+
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="text-center">
+            <h6 class="text-warning">MEMORIES</h6>
+            <h1>EXPLORE OUR GALLERY</h1>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide gala" >
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/carousel-1.jpg" class="d-block w-100 caros" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/carousel-2.jpg" class="d-block w-100 caros" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/package-1.jpg" class="d-block w-100 caros" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+</div>
+
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-white-50 footer py-0 px-sm-3 px-lg-5" style="margin-top: 90px;">
