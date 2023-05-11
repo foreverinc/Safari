@@ -8,34 +8,6 @@ window.addEventListener("scroll", function () {
     }
 });
 
-var typingText = document.querySelector(".typing-text");
-
-// Define the text to be typed
-var textToType = typingText.getAttribute("data-text");
-
-// Define the typing speed in milliseconds
-var typingSpeed = 100;
-
-// Initialize the typing index
-var typingIndex = 0;
-
-// Start typing
-setInterval(function () {
-    // Check if there's still text to type
-    if (typingIndex < textToType.length) {
-        // Get the current text
-        var currentText = typingText.textContent;
-
-        // Append the next character
-        currentText += textToType[typingIndex];
-
-        // Update the text
-        typingText.textContent = currentText;
-
-        // Move to the next character
-        typingIndex++;
-    }
-}, typingSpeed);
 
 
 $(document).ready(function () {
@@ -44,7 +16,7 @@ $(document).ready(function () {
         margin: 10,
         responsiveClass: true,
         autoplay:true,
-        autoplayTimeout:5000, 
+        autoplayTimeout:7000, 
         center: true,
         nav: true,
         center:true,
@@ -64,37 +36,33 @@ $(document).ready(function () {
     });
 });
 
-var cards = document.getElementsByClassName("d-card");
-for (var i = 0; i < cards.length; i++) {
-    cards[i].addEventListener("mouseenter", function () {
-        this.classList.add("shadow-lg");
-    });
-    cards[i].addEventListener("mouseleave", function () {
-        this.classList.remove("shadow-lg");
-    });
+
+$(document).ready(function () {
+  // Add hover behavior to dropdown menu
+  $(".dropdown").hover(
+    function () {
+      $(this).find(".dropdown-menu").stop(true, true).delay(0).fadeIn(300);
+    },
+    function () {
+      $(this).find(".dropdown-menu").stop(true, true).delay(0).fadeOut(300);
+    }
+  );
+});
+
+
+function toggleTab(parent) {
+    const tab = document.querySelector(`#tab-${parent}`);
+    console.log(tab)
+  tab.classList.toggle("active");
 }
 
+$(document).ready(function () {
+	setInterval(function () {
+		$("#errorModal").modal("show");
+	}, 60000); // 60000 milliseconds = 1 minute
+});
 
-
-const titleElement = document.querySelector('#queen');
-const buttonElement = document.querySelector('#btns');
-const titleText = 'Queen Elizabeth National Park';
-let index = 0;
-let isTyping = true;
-
-const typeTitle = () => {
-  if (index <= titleText.length && isTyping) {
-    titleElement.textContent = titleText.slice(0, index) + '_';
-    index++;
-    setTimeout(typeTitle, 100);
-  } else {
-    isTyping = false;
-    titleElement.textContent = titleText;
-    buttonElement.style.display = 'flex';
-  }
-}
-
-setTimeout(typeTitle, 6000);
-
-
-
+// JavaScript code to trigger the modal when any link is clicked
+$("a").on("click", function () {
+	$("#errorModal").modal("show");
+});
